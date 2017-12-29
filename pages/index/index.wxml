@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+  <keyboard id='keyboard' bind:numClickEvent="_kbNumClickEvent"></keyboard>
+
+  <view class="v_index_top" bindtap="showKeyboard"></view>
+  <view class="page__bd page__bd_spacing v_index_opr">
+    <button class="weui-btn" style='background-color:#fd9522;' type="primary" bindtap="toTally">记一笔</button>
+  </view>
+  <view class="page__bd page__bd_spacing pd">
+    <view class="kind-list">
+      <view class="kind-list__item">
+        <view class="weui-cell" style="padding-right:15rpx;">
+            <view class="weui-cell__hd" style="position: relative;margin-right: 15rpx;">
+                <image src="../images/list_view.png" class="i_index_img"/>
+            </view>
+            <view class="weui-cell__bd" style="-webkit-box-flex:2;-webkit-flex:2;">
+                <view>今天</view>
+                <view class="v_item_date">最近一笔 工资收入 12.00</view>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <view class="v_item_zc">10.00</view>
+                <view class="v_item_sr">12.00</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+      
+      <view class="kind-list__item">
+        <view class="weui-cell" style="padding-right:15rpx;">
+            <view class="weui-cell__hd" style="position: relative;margin-right: 15rpx;">
+                <image src="../images/list_view.png" class="i_index_img"/>
+            </view>
+            <view class="weui-cell__bd">
+                <view>本周</view>
+                <view class="v_item_date">12月25日-12月31日</view>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <view class="v_item_zc">10.00</view>
+                <view class="v_item_sr">12.00</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+
+      <view class="kind-list__item">
+        <view class="weui-cell" style="padding-right:15rpx;">
+            <view class="weui-cell__hd" style="position: relative;margin-right: 15rpx;">
+                <image src="../images/list_view.png" class="i_index_img"/>
+            </view>
+            <view class="weui-cell__bd">
+                <view>本月</view>
+                <view class="v_item_date">12月01日-12月31日</view>
+            </view>
+            <view class="weui-cell__bd" style="text-align:right;">
+                <view class="v_item_zc">10.00</view>
+                <view class="v_item_sr">12.00</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

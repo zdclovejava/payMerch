@@ -1,0 +1,6 @@
+<view class="btn-area">
+    <button bindtap="testReqPost">wx.request.post</button>
+    <button bindtap="testReqGet">wx.request.get</button>
+    <button bindtap="testChooseImg">wx.chooseImage</button>
+    <progress percent="{{upprogress}}" show-info />
+</view>

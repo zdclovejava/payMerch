@@ -1,0 +1,27 @@
+<view hidden="{{!isShow}}">
+    <view class='wx-keyboard'>
+        <view class='wx-keyboard-line'>
+          <view class='wx-keyboard-btn' catchtap='_closeClickEvent'>关闭</view>
+        </view>
+        <view class='wx-keyboard-line'>
+          <view class='wx-keyboard-btn' data-keyvalue="7" catchtap='_numClickEvent'>7</view>
+          <view class='wx-keyboard-btn' data-keyvalue="8" catchtap='_numClickEvent'>8</view>
+          <view class='wx-keyboard-btn' data-keyvalue="9" catchtap='_numClickEvent'>9</view>
+        </view>
+        <view class='wx-keyboard-line'>
+          <view class='wx-keyboard-btn' data-keyvalue='4' catchtap='_numClickEvent'>4</view>
+          <view class='wx-keyboard-btn' data-keyvalue='5' catchtap='_numClickEvent'>5</view>
+          <view class='wx-keyboard-btn' data-keyvalue='6' catchtap='_numClickEvent'>6</view>
+        </view>
+        <view class='wx-keyboard-line'>
+          <view class='wx-keyboard-btn' data-keyvalue='1' catchtap='_numClickEvent'>1</view>
+          <view class='wx-keyboard-btn' data-keyvalue='2' catchtap='_numClickEvent'>2</view>
+          <view class='wx-keyboard-btn' data-keyvalue='3' catchtap='_numClickEvent'>3</view>
+        </view>
+        <view class='wx-keyboard-line'>
+          <view class='wx-keyboard-btn' data-keyvalue='.' catchtap='_numClickEvent'>.</view>
+          <view class='wx-keyboard-btn' data-keyvalue='0' catchtap='_numClickEvent'>0</view>
+          <view class='wx-keyboard-btn' data-keyvalue='d' catchtap='_numClickEvent'>x</view>
+        </view>
+    </view>
+</view>

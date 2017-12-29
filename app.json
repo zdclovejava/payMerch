@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/tally/tally",
+    
+    "pages/example/index",
+    "pages/example/button/button",
+    "pages/example/list/list",
+    "pages/example/input/input",
+    "pages/example/slider/slider",
+    "pages/example/uploader/uploader",
+    "pages/example/article/article",
+    "pages/example/badge/badge",
+    "pages/example/flex/flex",
+    "pages/example/footer/footer",
+    "pages/example/gallery/gallery",
+    "pages/example/grid/grid",
+    "pages/example/icons/icons",
+    "pages/example/loadmore/loadmore",
+    "pages/example/panel/panel",
+    "pages/example/preview/preview",
+    "pages/example/progress/progress",
+    "pages/example/actionsheet/actionsheet",
+    "pages/example/dialog/dialog",
+    "pages/example/msg/msg",
+    "pages/example/msg/msg_success",
+    "pages/example/msg/msg_fail",
+    "pages/example/picker/picker",
+    "pages/example/toast/toast",
+    "pages/example/navbar/navbar",
+    "pages/example/tabbar/tabbar",
+    "pages/example/searchbar/searchbar"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "backgroundColor": "#000",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "demo",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "color": "#FFF",
+    "backgroundColor":"#595d60",
+    "selectedColor":"#fd9522",
+    "position":"bottom",
+    "borderStyle":"black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "记账",
+        "iconPath":"pages/images/list.png",
+        "selectedIconPath":"pages/images/list.png"
+      },
+      {
+        "pagePath": "pages/example/index",
+        "text": "流水",
+        "iconPath": "pages/images/acc.png",
+        "selectedIconPath":"pages/images/acc.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "uploadFile":30000,
+    "connectSocket":10000
+  },
+  "debug": true
+}

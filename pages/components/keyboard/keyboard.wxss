@@ -1,0 +1,38 @@
+.wx-mask{
+  position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+.wx-keyboard{
+    position: fixed;
+    z-index: 5000;
+    width: 100%;
+    bottom: 0rpx;
+    background-color: #8b9096;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+    color:#FFFFFF;
+}
+.wx-keyboard-line{
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 100rpx;
+    font-size: 20px;
+    font-weight: 600;
+    border-top:1rpx solid #777c82;
+}
+
+.wx-keyboard-btn{
+    display: block;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
+    border-right:1rpx solid #777c82;
+}

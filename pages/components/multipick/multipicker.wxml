@@ -1,0 +1,4 @@
+<picker class="weui-btn" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" range-key="name" value="{{multiObjIndex}}" range="{{objectMultiArray}}">
+                <button type="default">多列选择器</button>
+                <view class="picker"></view>
+</picker>
