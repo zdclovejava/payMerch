@@ -1,39 +1,75 @@
 <view class="page">
-    <view class="page__bd">
-        <view class="weui-tab">
-            <view class="weui-navbar">
-                <block wx:for="{{tabs}}" wx:key="*this">
-                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-                        <view class="weui-navbar__title">{{item}}</view>
-                    </view>
-                </block>
-                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-cells weui-cells_after-title" style="border:0px;">
+            <view class="weui-cell weui-cell_input" >
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="digit" placeholder-style="color:#268a64;" style="font-size:40rpx;color:#268a64;font-weight:400;" bindinput="bindZcInput" bindfocus="bindZcFocus" bindblur="bindZcBlur" value="{{zcValue}}"/>
+              </view>
             </view>
-            <view class="weui-tab__panel">
-                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                      <view class="weui-cells weui-cells_after-title" style="border:0px;">
-                          <view class="weui-cell weui-cell_input" >
-                              <view class="weui-cell__bd">
-                                  <view class="weui-input" style="font-size:40rpx;color:#268a64;font-weight:400;">0.00</view>
-                              </view>
-                          </view>
-                          <view class="weui-cell weui-cell_input">
-                              <view class="weui-cell__bd">
-                                  <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
-                                      <view class="weui-input">{{accounts[accountIndex]}}</view>
-                                  </picker>
-                              </view>
-                          </view>
-                          
-                      </view>
-                      <view class="weui-btn-area">
-                          <button class="weui-btn" style='background-color:#fd9522;' type="primary">保存</button>
-                      </view>
-                  </view>
-                
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <picker mode="multiSelector" range-key="subject_name" value="{{subjectPickIndex}}" range="{{subjectPickItem}}" bindchange="bindSubjectPickerChange" bindcolumnchange="bindSubjectPickerColumnChange">
+                  <view class="weui-input">{{subjectPickItem[0][subjectPickIndex[0]].subject_name}}>{{subjectPickItem[1][subjectPickIndex[1]].subject_name}}</view>
+                </picker>
+              </view>
             </view>
+
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <picker mode="multiSelector" range-key="acc_name" value="{{accPickIndex}}" range="{{accPickItem}}" bindchange="bindAccPickerChange" bindcolumnchange="bindAccPickerColumnChange">
+                  <view class="weui-input">{{accPickItem[1][accPickIndex[1]].acc_name}}</view>
+                </picker>
+              </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input" >
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="备注..."/>
+              </view>
+            </view>
+          </view>
+          <view class="weui-btn-area">
+            <button class="weui-btn" style='background-color:#fd9522;' type="primary">保存</button>
+          </view>
         </view>
+                
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class="weui-cells weui-cells_after-title" style="border:0px;">
+            <view class="weui-cell weui-cell_input" >
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="digit" placeholder-style="color:#b0414a;" style="font-size:40rpx;color:#b0414a;font-weight:400;" placeholder="0.00" value="{{srValue}}"/>
+              </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <picker bindchange="bindAccountChange" mode="multiSelector" range-key="subject_name" value="{{multiObjIndex}}" range="{{accPickItem}}" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange">
+                  <view class="weui-input">{{accPickItem[0][multiObjIndex[0]].subject_name}}>{{accPickItem[1][multiObjIndex[1]].subject_name}}</view>
+                </picker>
+              </view>
+            </view>
+            <view class="weui-cell weui-cell_input" >
+              <view class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="备注..."/>
+              </view>
+            </view>
+          </view>
+          <view class="weui-btn-area">
+            <button class="weui-btn" style='background-color:#fd9522;' type="primary">保存</button>
+          </view>
+        </view>
+      </view>
     </view>
-</view>
+  </view>
+</view>1
